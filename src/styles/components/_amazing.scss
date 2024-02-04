@@ -1,0 +1,26 @@
+.amazing {
+  @include styles(padding-top, 121,30);
+  @include styles(padding-bottom, 231, 150);
+  background-color: white;
+  background-position: center;
+  background-repeat: no-repeat;
+  // .amazing__title
+  &__title {
+    @include styles(font-size, 30);
+    @include styles(line-height, 36);
+    @include styles(letter-spacing, 0.15);
+    @include styles(max-width, 350);
+    @include styles(margin-bottom, 34);
+    color: $black-color;
+    text-align: center;
+    font-weight: 700;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  // .amazing__btn
+  &__btn {
+    margin: 0 auto;
+  }
+
+}

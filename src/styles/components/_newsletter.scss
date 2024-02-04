@@ -1,0 +1,51 @@
+.newsletter {
+  @include styles(padding-top, 30);
+  @include styles(padding-bottom, 30);
+  background-color: #171819;
+  //.newsletter__row
+  &__row {
+    @include styles(column-gap, 70);
+    @include styles(row-gap, 30);
+    column-gap: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include to(800px){
+      flex-direction: column;
+    }
+  }
+
+  // .newsletter__title
+  &__title {
+    @include styles(font-size, 22);
+    @include styles(letter-spacing, 0.846);
+    color: $white-color;
+    font-weight: 700;
+  }
+
+  // .newsletter__form
+  &__form {
+    display: flex;
+    //align-items: center;
+  }
+
+  //.newsletter__input
+  &__input{
+    @include styles(font-size, 14, 11);
+    @include styles(letter-spacing, 0.07);
+    @include styles(width, 250);
+    height: 40px;
+    color: $black-color;
+    border: 1px solid #979797;
+    background: $white-color;
+    padding-left: 16px;
+    z-index: 1;
+    @include to(500px) {
+      height: 30px;
+    }
+  }
+
+  // .newsletter__btn
+  &__btn {
+  }
+}

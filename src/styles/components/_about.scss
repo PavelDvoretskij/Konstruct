@@ -1,0 +1,99 @@
+.about {
+  @include styles(padding-top, 57);
+  color: $black-color;
+  // .about__title
+  &__title {
+    @include styles(margin-bottom, 54);
+    @include styles(letter-spacing, 2.7);
+    text-align: center;
+    font-weight: 700;
+    text-transform: uppercase;
+
+    &:after {
+      @include styles(width, 50);
+      content: '';
+      display: block;
+      margin: 10px auto 0;
+      height: 2px;
+      background-color: $blue-color;
+    }
+  }
+
+  // .about__row
+  &__row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    @include to(800px){
+      grid-template-columns: 1fr;
+    }
+  }
+
+  // .about__text
+  &__text {
+    max-width: 400px;
+    width: 100%;
+    @include to(800px){
+      margin-bottom: 30px;
+      max-width: 100%;
+    }
+  }
+
+  // .about__subtitle
+  &__subtitle {
+    @include styles(font-size, 20,15);
+    @include styles(margin-bottom, 30);
+    font-weight: 700;
+    letter-spacing: 0.18px;
+    span {
+      color: #16ACE8;
+    }
+  }
+
+  // .about__desc
+  &__desc {
+    @include styles(font-size, 13, 12);
+    @include styles(line-height, 23);
+    @include styles(letter-spacing, 0.188);
+    font-weight: 400;
+    padding-bottom: 2px;
+  }
+
+  // .about__gallery
+  &__gallery {
+    @include styles(column-gap, 20);
+    @include styles(padding-left, 10);
+    display: flex;
+    @include to(800px){
+      padding-left: 0;
+    }
+  }
+
+  // .about__img
+  &__img {
+    @include widthHeight((140,224));
+    margin-top: auto;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    @include to(800px){
+      width: 100%;
+      @include styles(height, 400, 150);
+    }
+  }
+
+  // .about__img-title
+  &__img-title {
+    @include styles(padding-top, 13);
+    @include styles(padding-left, 14);
+    @include styles(padding-right, 14);
+    @include styles(line-height, 31);
+    @include styles(font-size, 24);
+    @include styles(letter-spacing, 0.188);
+    color: $white-color;
+    font-weight: 800;
+    text-transform: uppercase;
+  }
+}
+
+
+

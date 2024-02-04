@@ -1,0 +1,179 @@
+.footer {
+  @include styles(padding-top, 41);
+  @include styles(letter-spacing, 0.85);
+  background-color: #141A20;
+  color: $white-color;
+  // .footer__row
+  &__row {
+    @include styles(margin-bottom, 45);
+    display: grid;
+    grid-template-columns: 34% 34% 20% 10%;
+    @include to(800px) {
+      grid-template-columns: 50% 50%;
+    }
+    @include to(500px) {
+      grid-template-columns: 100%;
+    }
+  }
+
+  //.footer__item-company
+  &__item-company {
+    @include styles(max-width, 250);
+    width: 100%;
+    @include to(500px) {
+      max-width: 100%;
+      margin-bottom: 30px;
+    }
+  }
+
+
+  //.footer__item-links
+  &__item-links {
+    @include to(500px) {
+      margin: 0 auto;
+    }
+  }
+
+  // .footer__title
+  &__title {
+    @include styles(font-size, 11, 10);
+    text-transform: uppercase;
+    margin-bottom: 19px;
+    @include to(500px) {
+      text-align: center;
+    }
+  }
+
+  //.footer__title-company
+  &__title-company {
+    @include to(500px) {
+      margin-bottom: 10px;
+    }
+  }
+
+  //.footer__title-links
+  &__title-links {
+    margin-bottom: 10px;
+  }
+
+  // .footer__logo
+  &__logo {
+    @include widthHeight((101, 23));
+    margin-bottom: 10px;
+    @include to(500px) {
+      display: block;
+      margin: 0 auto 10px;
+    }
+  }
+
+  // .footer__text
+  &__text {
+    @include styles(font-size, 11, 10);
+    @include styles(line-height, 19);
+  }
+
+  // .footer__menu
+  &__menu {
+    @include styles(column-gap, 35, 5);
+    display: flex;
+    @include to(500px) {
+      column-gap: 10px;
+    }
+  }
+
+  //.footer__menu-list
+  &__menu-list {
+    display: flex;
+    flex-direction: column;
+
+  }
+
+  // .footer__link
+  &__link {
+    @include styles(font-size, 11, 10);
+    @include styles(line-height, 25);
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: color 0.5s ease;
+
+    &:hover {
+      color: $blue-color;
+    }
+  }
+
+  //.footer__item-contact
+  &__item-contact {
+    @include styles(max-width, 110);
+    @include styles(font-size, 11, 10);
+    @include styles(line-height, 16);
+    width: 100%;
+    @include to(1000px) {
+      max-width: 90%;
+    }
+    @include to(800px) {
+      padding-top: 30px;
+
+    }
+    @include to(500px) {
+      max-width: 80%;
+      margin: 0 auto;
+      text-align: center;
+    }
+  }
+
+  //.footer__title-contact
+  &__title-contact {
+    margin-bottom: 14px;
+  }
+
+  // .footer__address
+  &__address {
+    margin-bottom: 16px;
+  }
+
+  // .footer__tel
+  &__tel {
+    margin-bottom: 16px;
+  }
+
+  // .footer__mail
+  &__mail {
+  }
+
+  //.footer__item-soc
+  &__item-soc {
+    @include to(500px) {
+      margin: 0 auto;
+    }
+  }
+
+  // .footer__soc
+  &__soc {
+    display: flex;
+    @include styles(column-gap, 24, 0);
+    @include to(800px) {
+      column-gap: 10px;
+    }
+  }
+
+  // .footer__soc-link
+  &__soc-link {
+    padding-top: 25px;
+    color: $white-color;
+    font-size: 15px;
+    transition: color 0.5s ease;
+
+    &:hover {
+      color: $blue-color;
+    }
+  }
+
+  // .footer__copyright
+  &__copyright {
+    @include styles(padding-top, 16);
+    @include styles(padding-bottom, 25);
+    font-size: 11px;
+    text-align: center;
+    margin-left: 10px;
+  }
+}
